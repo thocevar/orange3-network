@@ -640,7 +640,7 @@ class OWNxExplorer(widget.OWWidget):
 
         try:
             a = table.get_column_view(self.attr_size)[0]
-            values = a.copy()
+            values = np.array(list(map(float, a)))
         except Exception:
             for node in self.view.nodes:
                 node.setSize(MIN_NODE_SIZE * self.point_width)
